@@ -7,12 +7,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserMapper {
-    public User mapToPost(UserDto userInput) {
+    public User mapToUser(UserDto userInput) {
         return User.builder().name(userInput.getName()).age(userInput.getAge()).email(userInput.getEmail()).build();
 
     }
 
-    public UserDto mapToPostDto(User user) {
+    public UserDto mapToUserDto(User user) {
         return UserDto.builder()
                 .id(user.getId()).name(user.getName()).age(user.getAge()).email(user.getEmail())
                 .build();
